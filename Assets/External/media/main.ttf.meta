@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: d94c8d1c065f21243a2ce43e0767fd77
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: FL Pismo Techniczne
+  fontNames:
+  - FL Pismo Techniczne
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 06619a75815a81a4fa158202d15fc131, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
