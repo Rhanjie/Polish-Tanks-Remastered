@@ -395,7 +395,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 519420032}
-  maxVelocity: 20
+  acceleration: 5
+  rotationSpeed: 30
 --- !u!50 &563116538
 Rigidbody2D:
   serializedVersion: 4
@@ -407,15 +408,15 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_UseAutoMass: 1
+  m_Mass: 11.811343
+  m_LinearDrag: 1.5
+  m_AngularDrag: 1.5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &1022817245
 GameObject:
@@ -428,6 +429,7 @@ GameObject:
   - component: {fileID: 1022817246}
   - component: {fileID: 1022817248}
   - component: {fileID: 1022817247}
+  - component: {fileID: 1022817249}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
@@ -487,7 +489,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0.13999999, y: 0.13999999, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -6737,6 +6739,20 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1022817249
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022817245}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 0fbcdc2a166c38347b0b7966d08f1d56, type: 2}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
 --- !u!1 &1881255129
 GameObject:
   m_ObjectHideFlags: 0
@@ -6762,7 +6778,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881255129}
   m_Enabled: 1
-  m_CellSize: {x: 1.28, y: 1.28, z: 0}
+  m_CellSize: {x: 1, y: 1, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
