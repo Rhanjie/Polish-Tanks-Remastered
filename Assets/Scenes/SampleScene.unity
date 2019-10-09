@@ -194,6 +194,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &526442317 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8103679633223994864, guid: 84fb97e53981fa344b468a584aaf5a1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8103679633274602610}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1022817245
 GameObject:
   m_ObjectHideFlags: 0
@@ -6585,6 +6591,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8103679633223994864, guid: 84fb97e53981fa344b468a584aaf5a1a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103679633223994864, guid: 84fb97e53981fa344b468a584aaf5a1a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103679633223994864, guid: 84fb97e53981fa344b468a584aaf5a1a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103679633223994864, guid: 84fb97e53981fa344b468a584aaf5a1a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103679633223994864, guid: 84fb97e53981fa344b468a584aaf5a1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8103679632747199876, guid: 84fb97e53981fa344b468a584aaf5a1a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6645,5 +6676,15 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 519420032}
+    - target: {fileID: 8103679632747199883, guid: 84fb97e53981fa344b468a584aaf5a1a,
+        type: 3}
+      propertyPath: turret
+      value: 
+      objectReference: {fileID: 526442317}
+    - target: {fileID: 8103679632747199883, guid: 84fb97e53981fa344b468a584aaf5a1a,
+        type: 3}
+      propertyPath: turretRotationSpeed
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84fb97e53981fa344b468a584aaf5a1a, type: 3}
