@@ -11,6 +11,11 @@ using Vector4 = UnityEngine.Vector4;
 public class PlayerMovement : MonoBehaviour {
     public Transform camera;
     public Transform turret;
+    public Transform shootPlace;
+    public Rigidbody2D bulletPrefab;
+
+    public ParticleSystem shotFog;
+    
     public float acceleration = 5f;
     public float rotationSpeed = 30f;
     public double turretRotationSpeed = 15f;
@@ -29,6 +34,10 @@ public class PlayerMovement : MonoBehaviour {
     private void Update() {
         velocity = Input.GetAxis("Vertical") * acceleration;
         rotationVelocity = Input.GetAxis("Horizontal") * rotationSpeed;
+
+        if (Input.GetButtonDown("Fire1")) {
+            shoot();
+        }
 
         if (velocity >= 0f)
             rotationVelocity *= -1;
@@ -51,5 +60,14 @@ public class PlayerMovement : MonoBehaviour {
 
         Vector2 position = body.position;
         camera.position = new Vector3(position.x, position.y, -10);
+    }
+
+    private void shoot() {
+        Debug.Log("Shot");
+
+        Rigidbody2D bullet = Instantiate(bulletPrefab, shootPlace.position, shootPlace.rotation);
+        bullet.AddRelativeForce(-Vector2.left * 1000f);
+        
+        shotFog.Play();
     }
 }
