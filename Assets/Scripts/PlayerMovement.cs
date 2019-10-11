@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
+using Quaternion = UnityEngine.Quaternion;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 using Vector4 = UnityEngine.Vector4;
@@ -19,7 +20,7 @@ public class PlayerMovement : MonoBehaviour {
     private float velocity;
     private float rotationVelocity;
     private double newRotation;
-    private int direction;
+    private Quaternion completedRotation;
 
     private void Start() {
         body = GetComponent<Transform>();
@@ -37,21 +38,16 @@ public class PlayerMovement : MonoBehaviour {
         newRotation = Mathf.Rad2Deg * Math.Atan2(
             convertedMousePosition.y - turret.position.y,
             convertedMousePosition.x - turret.position.x);
-        
-        //if (turret.eulerAngles.z - currentRotation < 180 && turret.eulerAngles.z - currentRotation > -180)
-        if (newRotation < 0)
-            direction = -1;
 
-        else direction = 1;
+        completedRotation = Quaternion.Euler(0f, 0f, (float)newRotation);
     }
 
     private void FixedUpdate() {
-        body.Translate(Vector3.up * (velocity * Time.fixedDeltaTime));
+        body.Translate(-Vector3.left * (velocity * Time.fixedDeltaTime));
         body.Rotate(0f, 0f, rotationVelocity * Time.fixedDeltaTime);
         
-        if ((int) turret.eulerAngles.z != (int) newRotation) {
-            turret.Rotate(new Vector3(0f, 0f, (float) turretRotationSpeed * direction * Time.fixedDeltaTime));
-        }
+        turret.rotation = Quaternion.RotateTowards(turret.rotation, completedRotation,
+            (float)turretRotationSpeed * Time.fixedDeltaTime);
 
         Vector2 position = body.position;
         camera.position = new Vector3(position.x, position.y, -10);
