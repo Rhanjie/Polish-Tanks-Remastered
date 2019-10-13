@@ -30,9 +30,12 @@ public class PlayerMovement : MonoBehaviour {
     private void Update() {
         velocity = Input.GetAxis("Vertical") * acceleration;
         rotationVelocity = Input.GetAxis("Horizontal") * rotationSpeed;
-        
-        if (velocity >= 0f)
+
+        if (velocity >= 0f) {
             rotationVelocity *= -1;
+        }
+        
+        else velocity /= 2;
 
         Vector3 convertedMousePosition = playerCamera.ScreenToWorldPoint(Input.mousePosition);
 

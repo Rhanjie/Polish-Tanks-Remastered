@@ -44,9 +44,18 @@ TagManager:
   - name: Background
     uniqueID: 2408528069
     locked: 0
+  - name: Obstacles
+    uniqueID: 1592154553
+    locked: 0
   - name: Characters
     uniqueID: 2107075627
     locked: 0
-  - name: Foreground
+  - name: Effects
+    uniqueID: 1668860293
+    locked: 0
+  - name: BigObjects
     uniqueID: 495792683
+    locked: 0
+  - name: Sky
+    uniqueID: 2099591363
     locked: 0

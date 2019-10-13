@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6481622194844363398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0, z: 0}
-  m_LocalScale: {x: 10, y: 5, z: 1}
+  m_LocalScale: {x: 3.2887027, y: 10.317499, z: 2.0635}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -101,7 +101,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &61412275087109174
 BoxCollider2D:
@@ -141,3 +141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff003f77008b26a4a86d03e6273b13ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shooter: {fileID: 3723625048730226496, guid: edf9dc1dafdffa74da44fbdf2ee69e9b, type: 3}
+  explosion: {fileID: 2640046652916072971, guid: 2377cd1d4f7838f408458d7dbebcde8d,
+    type: 3}
